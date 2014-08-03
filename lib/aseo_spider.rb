@@ -1,5 +1,6 @@
+require "httparty"
 require "query"
-require "amazone/ecs"
+require "amazon/ecs"
 #require "aseo_db"
 require "aseo_spider/version"
 require "aseo_spider/baidu_spider"
