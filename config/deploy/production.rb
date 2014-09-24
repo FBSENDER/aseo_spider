@@ -4,7 +4,7 @@
 # is considered to be the first unless any hosts have the primary
 # property set.  Don't declare `role :all`, it's a meta role.
 
-role :app, %w{deploy@example.com}
+role :app, %w{linode}
 
 
 # Extended Server Syntax
@@ -18,8 +18,8 @@ server 'linode',
   roles: %w{app}, 
   ssh_options: {
     user: 'work',
-    keys: %w(/home/lmcvm/.ssh/id_rsa)
-    auth_methods: "publickey"
+    keys: %w(~/.ssh/id_rsa),
+    auth_methods: %w{publickey}
   }
 
 
