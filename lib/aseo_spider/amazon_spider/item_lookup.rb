@@ -1,5 +1,5 @@
 module AseoSpider
-  class Amazon 
+  class AmazonSpider
     def item_lookup(asin,access_key,secret_key,associate_tag)
       item = nil
       loop do 
