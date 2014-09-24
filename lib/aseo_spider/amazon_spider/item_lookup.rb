@@ -1,10 +1,10 @@
 module AseoSpider
   class AmazonSpider
-    def item_lookup(asin,access_key,secret_key,associate_tag)
+    def item_lookup(asin)
       item = nil
       loop do 
         begin
-          result = Amazon::Ecs.item_lookup(asin,{:AWS_access_key_id => access_key,:AWS_secret_key => secret_key,:associate_tag => associate_tag})
+          result = Amazon::Ecs.item_lookup(asin)
           item = result.first_item
           break
         rescue Exception => ex

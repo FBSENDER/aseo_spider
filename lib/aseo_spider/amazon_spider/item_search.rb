@@ -17,10 +17,10 @@ module AseoSpider
         begin
           #do api
           asins = []
-          result = Amazon::Ecs.item_search(keyword,{:search_index => search_index, :item_page => item_pagei, :response_group => "ItemIds"})
+          result = Amazon::Ecs.item_search(keyword,{:search_index => search_index, :item_page => item_page, :response_group => "ItemIds"})
           if !result.items.nil? && result.items.size > 0
             result.items.each do |item|
-              asins << item.get "ASIN"
+              asins << item.get("ASIN")
             end
           end
           return asins
